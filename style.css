@@ -150,3 +150,40 @@ footer {
     padding: 30px;
     margin-top: 50px;
 }
+
+/* ESTILOS BOTÓN WHATSAPP */
+.whatsapp-btn {
+    position: fixed; /* Se queda fijo en la pantalla */
+    bottom: 25px;    /* Distancia desde abajo */
+    right: 25px;     /* Distancia desde la derecha */
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Verde oficial de WhatsApp */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;    /* Para que siempre esté encima de todo */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.15); /* Se agranda un poquito al pasar el mouse */
+    background-color: #20ba5a;
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Ajuste para celulares (que no tape el texto) */
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
